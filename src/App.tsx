@@ -1,4 +1,4 @@
-import React from 'react';
+import { Suspense } from 'react';
 import {
   BrowserRouter as Router,
   Routes,
@@ -156,7 +156,7 @@ function App() {
               <Route
                 path='visa-types/:type'
                 element={
-                  <React.Suspense
+                  <Suspense
                     fallback={
                       <div className='flex items-center justify-center min-h-screen'>
                         Loading...
@@ -164,7 +164,7 @@ function App() {
                     }
                   >
                     <VisaTypeDetail />
-                  </React.Suspense>
+                  </Suspense>
                 }
               />
               <Route path='communicating' element={<CommunicatingPage />} />
